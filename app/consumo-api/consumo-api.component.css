@@ -1,0 +1,10 @@
+mat-card{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    
+    border-radius: 50%;
+}

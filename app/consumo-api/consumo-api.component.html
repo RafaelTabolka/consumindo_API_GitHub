@@ -1,0 +1,46 @@
+<mat-card *ngIf="cardValues" class="example-card">
+
+  <mat-card-title-group>
+    <mat-card-title>Shupa ku</mat-card-title>
+    <mat-card-subtitle>GitHub</mat-card-subtitle>
+    <img class="img" mat-card-xl-image [src]="image" >
+  </mat-card-title-group>
+
+  <mat-card-content>
+   <span>Id of User:</span> {{id}}
+  </mat-card-content>
+
+  <mat-card-content>
+   <span>User name:</span> {{login}}
+  </mat-card-content>
+
+  <mat-card-content>
+   <span>Followers:</span> {{followers}}
+  </mat-card-content>
+
+  <mat-card-content>
+   <span>Following:</span> {{following}}
+  </mat-card-content>
+
+  <mat-card-content>
+   <span>Public Repositories:</span> {{public_repos}}
+  </mat-card-content>
+
+  <mat-card-content *ngIf="input.value == 'MarlonFer77'">
+    <span>Diferencial: Carioca Safado</span>
+   </mat-card-content>
+ 
+</mat-card>
+
+
+<mat-card>
+  <mat-form-field appearance="fill">
+    <mat-label>Digite o nome do usuário</mat-label>
+    <input matInput #input />
+  </mat-form-field>
+  <button color="primary" type="submit" (click)="dataUsers(input.value)" mat-raised-button>
+    Buscar Usuário
+  </button>
+</mat-card>
+
+<ng-template></ng-template>
